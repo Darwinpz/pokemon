@@ -28,17 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Puntajes));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.TABLA = new System.Windows.Forms.DataGridView();
-            this.Usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Puntaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.LBL_PUNTAJES = new System.Windows.Forms.Label();
             this.BTN_INICIO = new System.Windows.Forms.Button();
+            this.TABLA = new System.Windows.Forms.DataGridView();
+            this.Puntaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TABLA)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TABLA)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -47,6 +49,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.TABLA, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
@@ -54,40 +57,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 450);
             this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // TABLA
-            // 
-            this.TABLA.AllowUserToAddRows = false;
-            this.TABLA.AllowUserToDeleteRows = false;
-            this.TABLA.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.TABLA.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.TABLA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.TABLA.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Usuario,
-            this.Puntaje});
-            this.TABLA.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TABLA.Location = new System.Drawing.Point(3, 48);
-            this.TABLA.MultiSelect = false;
-            this.TABLA.Name = "TABLA";
-            this.TABLA.ReadOnly = true;
-            this.TABLA.RowHeadersWidth = 51;
-            this.TABLA.RowTemplate.Height = 24;
-            this.TABLA.Size = new System.Drawing.Size(794, 399);
-            this.TABLA.TabIndex = 0;
-            // 
-            // Usuario
-            // 
-            this.Usuario.HeaderText = "USUARIO";
-            this.Usuario.MinimumWidth = 6;
-            this.Usuario.Name = "Usuario";
-            this.Usuario.ReadOnly = true;
-            // 
-            // Puntaje
-            // 
-            this.Puntaje.HeaderText = "PUNTAJE";
-            this.Puntaje.MinimumWidth = 6;
-            this.Puntaje.Name = "Puntaje";
-            this.Puntaje.ReadOnly = true;
             // 
             // tableLayoutPanel2
             // 
@@ -127,6 +96,61 @@
             this.BTN_INICIO.UseVisualStyleBackColor = true;
             this.BTN_INICIO.Click += new System.EventHandler(this.BTN_INICIO_Click);
             // 
+            // TABLA
+            // 
+            this.TABLA.AllowUserToAddRows = false;
+            this.TABLA.AllowUserToDeleteRows = false;
+            this.TABLA.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.TABLA.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.TABLA.BackgroundColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.TABLA.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.TABLA.ColumnHeadersHeight = 29;
+            this.TABLA.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Usuario,
+            this.Puntaje});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.TABLA.DefaultCellStyle = dataGridViewCellStyle2;
+            this.TABLA.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TABLA.Location = new System.Drawing.Point(3, 48);
+            this.TABLA.MultiSelect = false;
+            this.TABLA.Name = "TABLA";
+            this.TABLA.ReadOnly = true;
+            this.TABLA.RowHeadersWidth = 51;
+            this.TABLA.RowTemplate.Height = 24;
+            this.TABLA.Size = new System.Drawing.Size(794, 399);
+            this.TABLA.TabIndex = 0;
+            // 
+            // Puntaje
+            // 
+            this.Puntaje.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Puntaje.HeaderText = "PUNTAJE";
+            this.Puntaje.MinimumWidth = 6;
+            this.Puntaje.Name = "Puntaje";
+            this.Puntaje.ReadOnly = true;
+            this.Puntaje.Width = 370;
+            // 
+            // Usuario
+            // 
+            this.Usuario.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Usuario.HeaderText = "USUARIO";
+            this.Usuario.MinimumWidth = 6;
+            this.Usuario.Name = "Usuario";
+            this.Usuario.ReadOnly = true;
+            this.Usuario.Width = 371;
+            // 
             // Puntajes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -137,12 +161,11 @@
             this.Name = "Puntajes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Puntajes";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Puntajes_FormClosing);
             this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.TABLA)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TABLA)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -150,11 +173,11 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.DataGridView TABLA;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Usuario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Puntaje;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label LBL_PUNTAJES;
         private System.Windows.Forms.Button BTN_INICIO;
+        private System.Windows.Forms.DataGridView TABLA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Usuario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Puntaje;
     }
 }
